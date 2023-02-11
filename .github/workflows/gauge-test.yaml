@@ -10,12 +10,9 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
       - run: curl https://get.docker.com | sh
-      - run: docker --version
       - run: curl -L "https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-      - run: docker-compose --version
       - run: curl -SsL https://downloads.gauge.org/stable | sh -s -- --location-[custom path]
       - run: gauge install java --version 0.7.15
-      - run: gauge version
       - run: docker pull selenoid/vnc_chrome:90.0
       - run: docker pull selenoid/video-recorder:latest-release
       - run: docker network create selenoid-network
