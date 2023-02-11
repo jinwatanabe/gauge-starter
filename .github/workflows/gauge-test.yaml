@@ -16,6 +16,7 @@ jobs:
       - run: curl -SsL https://downloads.gauge.org/stable | sh -s -- --location-[custom path]
       - run: gauge install java --version 0.7.15
       - run: gauge version
+      - run: docker pull selenoid/vnc_chrome:90.0
       - run: docker network create selenoid-network
       - run: docker-compose up -d
       - run: mvn test
