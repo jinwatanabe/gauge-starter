@@ -12,3 +12,4 @@ jobs:
       - run: curl -SsL https://downloads.gauge.org/stable | sh -s -- --location-[custom path]
       - run: gauge install java --version 0.7.15
       - run: gauge version
+      - run: mvn test
