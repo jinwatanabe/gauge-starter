@@ -1,0 +1,12 @@
+name: gauge-test
+on: [push]
+jobs:
+  gauge-test:
+    runs-on: ubuntu-20.04
+    steps:
+      - use: actions/checkout@v2
+      - use: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - run: java --version
